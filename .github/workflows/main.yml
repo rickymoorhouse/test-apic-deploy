@@ -9,7 +9,7 @@ jobs:
     - uses: rickymoorhouse/apic-deploy@main
       with:
         manager-host: manager.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com
-        api-host: api.${{ secrets.host_suffix }}
+        api-host: api.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com
         provider-org: 'test-porg'
         catalog: 'sandbox'
         iam-apikey: ${{ secrets.iam_apikey }}
