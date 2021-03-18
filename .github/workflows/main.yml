@@ -6,7 +6,7 @@ jobs:
     name: A job to test api deployment
     steps:
     - uses: actions/checkout@v2
-    - uses: rickymoorhouse/apic-deploy@v1
+    - uses: rickymoorhouse/apic-deploy@main
       with:
         management-host: 'management.example.com'
         api-host: 'api.example.com'
