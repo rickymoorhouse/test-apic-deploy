@@ -8,8 +8,8 @@ jobs:
     - uses: actions/checkout@v2
     - uses: rickymoorhouse/apic-deploy@main
       with:
-        manager-host: 'management.example.com'
-        api-host: 'api.example.com'
+        manager-host: 'manager.${{ secrets.host_suffix }}'
+        api-host: 'api.${{ secrets.host_suffix }}'
         provider-org: 'test-porg'
         catalog: 'sandbox'
         iam-apikey: 'None'
