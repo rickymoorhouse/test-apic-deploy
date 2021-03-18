@@ -8,10 +8,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: rickymoorhouse/apic-deploy@main
       with:
-        manager-host: 'manager.${{ secrets.host_suffix }}'
-        api-host: 'api.${{ secrets.host_suffix }}'
+        manager-host: manager.${{ secrets.host_suffix }}
+        api-host: api.${{ secrets.host_suffix }}
         provider-org: 'test-porg'
         catalog: 'sandbox'
-        iam-apikey: 'None'
+        iam-apikey: ${{ secrets.iam_apikey }}
         product-file: 'product.yaml'
 
