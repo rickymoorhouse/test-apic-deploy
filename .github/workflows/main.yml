@@ -3,12 +3,12 @@ on: [push]
 jobs:
   apic-deploy-test:
     runs-on: ubuntu-latest
-    name: A job to test api deployment
+    name: Test api deployment
     steps:
     - uses: actions/checkout@v2
     - uses: rickymoorhouse/apic-deploy@main
       with:
-        manager-host: manager.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com 
+        manager-host: manager.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com
         api-host: api.${{ secrets.host_suffix }}
         provider-org: 'test-porg'
         catalog: 'sandbox'
