@@ -1,0 +1,18 @@
+on: [push]
+
+jobs:
+  apic-deploy-test:
+    runs-on: ubuntu-latest
+    name: A job to test api deployment
+    steps:
+    - uses: actions/checkout@v2
+    - id: deploy
+      uses: rickymoorhouse/apic-deploy@v1
+      with:
+        management-host: 'management.example.com'
+        api-host: 'api.example.com'
+        provider-org: 'test-porg'
+        catalog: 'sandbox'
+        iam-apikey: 'None'
+        product-file: 'product.yaml'
+
