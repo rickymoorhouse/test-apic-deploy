@@ -12,6 +12,8 @@ jobs:
         api-host: api.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com
         provider-org: 'test-porg'
         catalog: 'sandbox'
-        iam-apikey: ${{ secrets.iam_apikey }}
+        old-iam-apikey: ${{ secrets.iam_apikey }}
+        username: ${{ secrets.apic_username }}
+        password: ${{ secrets.apic_password }}        
         product-file: 'product.yaml'
 
