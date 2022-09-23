@@ -8,10 +8,10 @@ jobs:
     - uses: actions/checkout@v2
     - uses: rickymoorhouse/apic-deploy@main
       with:
-        manager-host: manager.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com
-        api-host: api.9a6e-bd639816.us-south.apiconnect.cloud.ibm.com
-        provider-org: 'test-porg'
+        manager-host: api-manager.us-east-a.apiconnect.automation.ibm.com
+        api-host: platform-api.us-east-a.apiconnect.automation.ibm.com
+        provider-org: 'demo'
         catalog: 'sandbox'
-        iam-apikey: ${{ secrets.iam_apikey }}
+        apikey: ${{ secrets.apikey }}
         product-file: 'product.yaml'
 
