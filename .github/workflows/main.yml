@@ -6,7 +6,7 @@ jobs:
     name: Test api deployment
     steps:
     - uses: actions/checkout@v2
-    - uses: rickymoorhouse/apic-deploy@main
+    - uses: ibm-apiconnect/actions@options
       with:
         manager-host: api-manager.us-east-a.apiconnect.automation.ibm.com
         api-host: platform-api.us-east-a.apiconnect.automation.ibm.com
