@@ -1,0 +1,20 @@
+on:
+  push:
+    branches:
+      - 'main'
+
+jobs:
+  apic-deploy-test:
+    runs-on: ubuntu-latest
+    name: API Deployment
+    steps:
+    - uses: actions/checkout@v2
+    - uses: ibm-apiconnect/actions@main
+      with:
+        manager-host: api-manager.us-east-a.apiconnect.automation.ibm.com
+        api-host: platform-api.us-east-a.apiconnect.automation.ibm.com
+        provider-org: 'demo'
+        catalog: 'sandbox'
+        apikey: ${{ secrets.apikey }}
+        product-file: 'product.yaml'
+
