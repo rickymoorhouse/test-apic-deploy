@@ -15,5 +15,6 @@ jobs:
         api-file: 'echo-api.yaml'
         provider-org: 'demo'
         catalog: 'sandbox'
+        apikey: ${{ secrets.apikey }}
         product-file: 'product.yaml'
 
