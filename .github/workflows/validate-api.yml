@@ -10,7 +10,7 @@ jobs:
       with:
         manager-host: api-manager.us-east-a.apiconnect.automation.ibm.com
         api-host: platform-api.us-east-a.apiconnect.automation.ibm.com
-        validate_only: 'true'
+        validate_only: 'false'
         validate_rulesets: 'true'
         api-file: 'echo-api.yaml'
         provider-org: 'demo'
