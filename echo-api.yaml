@@ -5,7 +5,7 @@ info:
   version: 1.1.0
   contact:
     name: Ricky Moorhouse
-    email: moorh@uk.ibm.com
+    email: apic.saas@ibm.com
 host: $(catalog.host)
 schemes: []
 basePath: /public
