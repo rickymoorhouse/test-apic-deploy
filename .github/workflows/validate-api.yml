@@ -17,7 +17,7 @@ jobs:
         catalog: 'sandbox'
         apikey: ${{ secrets.apikey }}
         product-file: 'product.yaml'
-      # Run Spectral
-      - uses: stoplightio/spectral-action@latest
-        with:
-          file_glob: 'echo-api.yaml'
+    # Run Spectral
+    - uses: stoplightio/spectral-action@latest
+      with:
+        file_glob: 'echo-api.yaml'
