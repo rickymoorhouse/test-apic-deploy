@@ -5,15 +5,19 @@ jobs:
     runs-on: ubuntu-latest
     name: API Deployment
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@v3
     - uses: ibm-apiconnect/actions@governance
       with:
         manager-host: api-manager.us-east-a.apiconnect.automation.ibm.com
         api-host: platform-api.us-east-a.apiconnect.automation.ibm.com
-        validate_only: 'true'
+        validate_only: 'false'
         validate_rulesets: 'true'
         api-file: 'echo-api.yaml'
         provider-org: 'demo'
         catalog: 'sandbox'
+        apikey: ${{ secrets.apikey }}
         product-file: 'product.yaml'
-
+    # Run Spectral
+    - uses: stoplightio/spectral-action@latest
+      with:
+        file_glob: 'echo-api.yaml'
